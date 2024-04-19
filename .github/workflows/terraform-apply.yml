@@ -6,9 +6,9 @@ on:
       - main
 
 env:
-  TF_CLOUD_ORGANIZATION: "YOUR-ORGANIZATION-HERE"
+  TF_CLOUD_ORGANIZATION: "egal"
   TF_API_TOKEN: "${{ secrets.TF_API_TOKEN }}"
-  TF_WORKSPACE: "learn-terraform-github-actions"
+  TF_WORKSPACE: "istegal"
   CONFIG_DIRECTORY: "./"
 
 jobs:
@@ -18,13 +18,13 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: read
-    steps:
+    steps: 
       - name: Checkout
         uses: actions/checkout@v3
 
       - name: Upload Configuration
         uses: hashicorp/tfc-workflows-github/actions/upload-configuration@v1.0.0
-        id: apply-upload
+        id: apply-upload 
         with:
           workspace: ${{ env.TF_WORKSPACE }}
           directory: ${{ env.CONFIG_DIRECTORY }}
