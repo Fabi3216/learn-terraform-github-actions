@@ -5,7 +5,7 @@ on:
 
 env:
   TF_CLOUD_ORGANIZATION: "istegal"
-  TF_API_TOKEN: "NnwUEUSRI0ozkQ.atlasv1.bn5FDTVjVOG1V9apuDp1uV8EAPoJfMx2DYPJEiPIt7QeU8iqkiEDgLeweAAbC35zMuQ"
+  TF_API_TOKEN: "${{ secrets.TF_API_TOKEN }}"
   TF_WORKSPACE: "learn-terraform-github-actions"
   CONFIG_DIRECTORY: "./"
 
